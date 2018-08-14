@@ -3,7 +3,7 @@
     "description": "Awesome bakery goodies!",
     "type": "theme",
     "config": {
-            "vendor-dir": "wp-content/themes/saarbakt"
+            "vendor-dir": "/wp-content/themes/saarbakt"
     },
     "authors": [
         {
