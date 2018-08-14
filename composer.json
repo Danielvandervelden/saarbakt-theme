@@ -1,10 +1,7 @@
 {
-    "name": "dvdv/saarbakt",
+    "name": "themes/saarbakt",
     "description": "Awesome bakery goodies!",
     "type": "theme",
-    "config": {
-            "vendor-dir": "/wp-content/themes/saarbakt"
-    },
     "authors": [
         {
             "name": "Daniel van der Velden",
