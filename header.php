@@ -59,7 +59,7 @@ else if ($header_image === NULL) {
 <body <?php body_class(); ?>>
 	<div class="page-wrapper">
 	<div class="header-container" style="background-image: url('<?php echo $header_image; ?>')">
-		<nav id="nav-bar" class="sticky" role="navigation">
+		<nav class="clearfix" id="nav-bar" class="sticky" role="navigation">
 			<div class="mobile-menu-icon"><i class="fa fa-bars" aria-hidden="true"></i></div>
 			<div class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
 
@@ -67,12 +67,10 @@ else if ($header_image === NULL) {
 					<?php wp_nav_menu( array( 'container_class' => 'main-nav', 'theme_location' => 'headerMenuLocation' ) ); ?>
 			</div>
 		</nav>
-		<div id="mobile-menu" class="no-display">
+		<div id="backdrop"></div>
+		<div id="mobile-menu">
 			<div class="exit"><i class="fas fa-times"></i></div>
-
-			<ul>
-				<?php wp_nav_menu( array( 'container_class' => 'main-nav', 'theme_location' => 'headerMenuLocation' ) ); ?>
-			</ul>
+			<h2>Menu</h2>
 		</div>
 
 		<div class="saarbaktlogo">
@@ -80,9 +78,7 @@ else if ($header_image === NULL) {
 		</div>
 	</div>
 
-	<div class="headertext">
-		<h2 class=" header-l textheaderpaginasingle"><?php if ( have_posts() ) : while ( have_posts() ) : the_post(); the_title(); endwhile;
+		<h2 class="page-title"><span class="title"><?php if ( have_posts() ) : while ( have_posts() ) : the_post(); the_title(); endwhile;
 		else: ?>
 		<p> <?php _e('Sorry, no posts matched your criteria.'); ?></p>
-	<?php endif; ?></h2>
-	</div>
+	<?php endif; ?></span></h2>

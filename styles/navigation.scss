@@ -1,0 +1,121 @@
+/*
+|------------------------------------------------------------
+| All styling for the navigation.
+|------------------------------------------------------------
+*/
+
+/*
+/* Mobile Styles
+/*_______________________________________________________*/
+.navigationdesktop {
+	display: none;
+}
+
+#backdrop {
+	width: 0;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.6);
+	transition: all 1s ease-in-out;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 80;
+
+	&.active {
+		opacity: 1;
+		width: 100vw;
+		height: 100vh;
+	}
+}
+
+#mobile-menu {
+	background-color: #FFF;
+	height: 100vh;
+	width: 80%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	transform: translateX(-1000px);
+	transition: all 1s ease-in-out;
+
+	&.active {
+		transform: translateX(0);
+	}
+
+	h2 {
+		margin-left: 20px;
+	}
+
+	.exit {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		z-index: 10;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	#menu-headermenu {
+		margin: 20px 0 0 10px;
+		padding: 10px;
+	}
+
+	li {
+		padding: 0;
+		margin: 0;
+		line-height: 23px;
+
+		a {
+			font-weight: 400;
+		}
+	}
+
+	.menu-item-has-children {
+		position: relative;
+		padding-right: 30px;
+
+		&:after {
+			content: "\f078";
+			font-family: $fontAwesome;
+			font-weight: 900;
+			font-size: 1.8rem;
+			position: absolute;
+			right: 10px;
+			top: 0;
+			transition: all 0.3s ease-in-out;
+		}
+
+		&.active:after {
+			transform: rotate(180deg);
+		}
+	}
+
+	.sub-menu {
+		display: none;
+
+		li {
+			padding-left: 10px;
+
+			a {
+				font-weight: 300;
+			}
+		}
+	}
+}
+
+/* Desktop Styles (minimum 1024px)
+  /*_______________________________________________________*/
+@media screen and (min-width: 1024px) {
+	#mobile-menu {
+		display: none;
+	}
+
+	.navigationdesktop {
+		display: block;
+	}
+}

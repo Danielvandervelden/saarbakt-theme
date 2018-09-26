@@ -1,0 +1,47 @@
+/*
+|------------------------------------------------------------
+| All styles for the header!
+|------------------------------------------------------------
+*/
+
+/*
+/* Mobile Styles
+/*_______________________________________________________*/
+.header-container {
+    background-size: cover;
+
+    #nav-bar {
+        background-color: rgba(255, 255, 255, 0.7);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 50;
+
+        .mobile-menu-icon {
+            color: #fed7da;
+            font-size: 2rem;
+            text-shadow: 0 0 4px #000;
+            float: left;
+            margin-left: 15px;
+        }
+
+        .search-icon {
+            color: #fed7da;
+            font-size: 2rem;
+            text-shadow: 0 0 4px #000;
+            float: right;
+            margin-right: 15px;
+        }
+    }
+}
+
+.sara-foto img {
+    max-width: 100%;
+}
+
+.saarbaktlogo img {
+    max-width: 100%;
+    padding-top: 50px; // for the mobile menu
+}

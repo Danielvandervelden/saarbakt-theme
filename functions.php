@@ -5,10 +5,10 @@
 require get_theme_file_path('/inc/search-route.php');
 
 function saarbakt_files() {
-	wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro');
+	wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 	wp_enqueue_style('style.css', get_stylesheet_uri());
 	wp_enqueue_script('main-saarbakt-js', get_theme_file_uri('/js/script.js'), array('jquery'), NULL, '1.0', true);
-	wp_enqueue_script( 'font-awesome', 'https://use.fontawesome.com/releases/v5.0.1/js/all.js', array(), null );
+	wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.3.1/css/all.css');
 	wp_localize_script('main-saarbakt-js', 'saarbaktData', array(
 		'root_url' => get_site_url(),
 	));

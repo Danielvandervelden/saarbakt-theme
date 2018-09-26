@@ -1,0 +1,85 @@
+/*
+|------------------------------------------------------------
+| All styles that are defined by default.
+|------------------------------------------------------------
+*/
+html {
+    font-size: 62.5%;
+    color: #242424;
+    font-family: "Roboto", "Arial", "Times New Roman", "sans-serif";
+  }
+  
+body {
+    font-size: 1.5rem;
+    background-color: $color5;
+  }
+  
+a {
+    color: $color2;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+        color: $color3;
+        font-weight: 500;
+      }
+  }
+  
+.no-scroll {
+    overflow: hidden;
+  }
+  
+.clearfix:after {
+    display: table;
+    content: "";
+    clear: both;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $color1;
+    position: relative;
+  }
+  
+  .page-title {
+    text-align: center;
+  }
+  
+  .title {
+    position: relative;
+    display: inline-block;
+    padding: 10px 70px;
+
+    &:before {
+        content: "";
+        width: 60px;
+        height: 50px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: url("/wp-content/themes/saarbakt/images/swirl-left.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      &:after {
+        content: "";
+        width: 60px;
+        height: 50px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-image: url("/wp-content/themes/saarbakt/images/swirl-right.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }    
+  }
+
+  .main-content-wrapper {
+    padding: $containerSpacing;
+  }
+  
