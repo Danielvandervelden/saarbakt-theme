@@ -1,5 +1,5 @@
 <footer>
-   <hr class="footerlijn">
+   <hr width="90%" color="pink">
                <div class="footer">
                      <div class="contactgegevens">
                         <h2>Sara van der Velden</h2>

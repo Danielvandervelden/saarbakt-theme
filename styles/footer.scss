@@ -1,0 +1,52 @@
+/*
+|------------------------------------------------------------
+| All styles for the footer.
+|------------------------------------------------------------
+*/
+
+/*
+/* Mobile Styles
+/*_______________________________________________________*/
+.footer {
+
+    padding: $defaultSpacing;
+    text-align: center;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    .contactgegevens {
+        margin-bottom: 15px;
+    }
+
+    .footerlinks {
+        margin-bottom: 15px;
+    }
+
+    .socialmediafooter {
+        margin-bottom: 15px;
+        font-size: 2rem;
+    }
+}
+
+/*
+/* Tablet Styles (minimum of 768px)
+/*_______________________________________________________*/
+@media screen and (min-width: 768px) {
+
+}
+
+/*
+/* Desktop Styles (minimum 1024px)
+/*_______________________________________________________*/
+@media screen and (min-width: 1024px) {
+
+}

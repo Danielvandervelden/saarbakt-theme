@@ -5,29 +5,15 @@ get_header();
 
 <div class="main-content-wrapper">
 
-	<?php $frontpageText = new Wp_Query(array(
-		'posts_per_page' => 1,
-		'post_type' => 'frontpagetext',
-	));
-	while($frontpageText->have_posts()) {
-		$frontpageText->the_post(); ?>
-
 		<div class="main-content">
-			<h1><?php the_title(); ?></h1>
 			<p><?php the_content(); ?></p>
 		</div>
 
-	<?php } ?>
 	<div class="sara-foto">
-
 		<?php
 		$image = get_field('voorpagina_foto');
-
-		if( !empty($image) ): ?>
-
-		<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-
-	<?php endif; ?>
+		echo '<img src="' . $image . '" alt="voorpagina foto">';
+		?>
 </div>
 </div>
 
@@ -43,20 +29,20 @@ get_header();
 		while ($homepagePosts->have_posts()) {
 			$homepagePosts->the_post(); ?>
 
-			<h2 class="header-l">Nieuwste Recept</h2>
+			<h2>Nieuwste Recept</h2>
 			<div class="single-blog-post">
 				<div class="post-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnailimage'); ?></a></div>
 
 			<div class="post-content">
-			  <h2 class="headline headline--medium headline--post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+			  <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
 
 		   <div class="metabox">
 			   <p>Gepost door <?php the_author_posts_link(); ?> op <?php the_date('n.j.y') ?> in de categorie: <?php echo get_the_category_list(', ') ?>.</p></div>
 
 		   <div class="generic-content">
 		   <p class="generic-content-p"><?php echo wp_trim_words(get_the_content(), 30);?></p>
-		   <form action="<?php the_permalink(); ?>">
-			   <button class="btn" type="submit">Verder Lezen<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+		   <form class="clearfix" action="<?php the_permalink(); ?>">
+			   <button class="btn btn-pink btn-right" type="submit">Verder Lezen <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
 		   </form>
 		   </div>
 		   </div>
@@ -75,19 +61,20 @@ get_header();
 				));
 				while($nieuwtjes->have_posts()) {
 					$nieuwtjes->the_post(); ?>
-					<h2 class="header-l">Meest recente nieuws</h2>
+					<h2>Meest recente nieuws</h2>
 					<div class="single-blog-post">
 						<div class="post-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnailimage'); ?></a></div>
+						
+						<div class="post-content">
+							<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
 
-						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-
-						<div class="generic-content">
-							<p><?php echo wp_trim_words(get_the_content(), 30);?></p>
+							<div class="generic-content">
+								<p><?php echo wp_trim_words(get_the_content(), 30);?></p>
+							</div>
+							<form class="clearfix" action="<?php the_permalink(); ?>">
+								<button class="btn btn-pink btn-right" type="submit"><span>Verder Lezen</span> <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+							</form>
 						</div>
-						<form action="<?php the_permalink(); ?>">
-							<button class="btn" type="submit">Verder Lezen<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-						</form>
-
 				<?php  }
 				?>
 

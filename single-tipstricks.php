@@ -8,7 +8,7 @@
 
 	</div>
 </div>
-	<div class="page-content-wrapper">
+	<div class="main-content-wrapper">
 		<div class="main-content">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); the_content(); endwhile;
 		else: ?>

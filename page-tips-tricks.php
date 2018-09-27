@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="container-blogpostfeed">
+<div class="main-content-wrapper">
 
 	<div class="blogpost">
 		<?php $tipstricks = new Wp_Query(array(

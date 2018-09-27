@@ -37,11 +37,12 @@
     }
 }
 
-.sara-foto img {
-    max-width: 100%;
-}
+.saarbaktlogo {
+    text-align: center;
 
-.saarbaktlogo img {
-    max-width: 100%;
-    padding-top: 50px; // for the mobile menu
+    img {
+        width: 100%;
+        max-width: 400px;
+        padding-top: 50px; // for the mobile menu
+    }
 }

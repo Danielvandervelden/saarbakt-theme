@@ -11,7 +11,7 @@ html {
   
 body {
     font-size: 1.5rem;
-    background-color: $color5;
+    background-color: #FFF;
   }
   
 a {
@@ -28,12 +28,19 @@ a {
 .no-scroll {
     overflow: hidden;
   }
+
+.no-display {
+  display: none;
+}
   
 .clearfix:after {
     display: table;
     content: "";
     clear: both;
   }
+
+  //#############################################################
+  // Typography
   
   h1,
   h2,
@@ -43,16 +50,24 @@ a {
   h6 {
     color: $color1;
     position: relative;
+    margin: 0;
+  }
+
+  p {
+    line-height: 2.4rem;
   }
   
   .page-title {
     text-align: center;
+    font-size: 2rem;
+    margin: 10px 0;
+    padding: 0 15px;
   }
   
   .title {
     position: relative;
     display: inline-block;
-    padding: 10px 70px;
+    padding: 15px 70px;
 
     &:before {
         content: "";
@@ -79,7 +94,56 @@ a {
       }    
   }
 
+  //#############################################################
+
+  //#############################################################
+  // Containers
+
   .main-content-wrapper {
     padding: $containerSpacing;
   }
+
+  //#############################################################
+
+  //#############################################################
+  // Buttons
   
+  .btn {
+    padding: 14px 45px;
+    border-radius: 4px;
+    max-width: 200px;
+    display: block;
+
+    &.btn-pink {
+      color: #FFF;
+      background-color: $color2;
+      border: 0;
+      outline: 0;
+      box-shadow: 0;
+      transition: all .3s ease-in-out;
+
+      .fa {
+        transition: all .3s ease-in-out;
+        opacity: 0;
+        font-size: 1.3rem;
+      }
+
+      &:hover {
+        background-color: $color3;
+        .fa.fa-chevron-right {
+          transform: translateX(10px);
+          opacity: 1;
+        }
+        .fa.fa-chevron-left {
+          transform: translateX(-10px);
+          opacity: 1;
+        }
+      }
+
+      &.btn-right {
+        float: right;
+      }
+    }
+  }
+
+  //#############################################################

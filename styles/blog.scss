@@ -1,0 +1,71 @@
+/*
+|------------------------------------------------------------
+| All styles for the blog
+|------------------------------------------------------------
+*/
+
+/*
+/* Mobile Styles
+/*_______________________________________________________*/
+
+.single-blog-post,
+.receptenbox {
+    width: 100%;
+    max-width: 500px; // fix this later in desktop;
+    margin: 10px auto 20px auto;
+    box-shadow: 1px 1px 10px $color3;
+    padding: 15px;
+    box-sizing: border-box;
+
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+    }
+
+    .post-thumbnail {
+
+        a {
+            display: block; // basically, make it as high as the image... some sort of clearfix if you will.
+            text-align: center;
+        }
+    }
+
+    .metabox {
+        font-size: 1rem;
+
+        p {
+            line-height:16px;
+        }
+    }
+
+    .post-content {
+
+        a h2 {
+            text-align: left;
+        }
+    }
+}
+
+.ingredientenflex {
+
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+    }
+}
+
+/*
+/* Tablet Styles (minimum of 768px)
+/*_______________________________________________________*/
+@media screen and (min-width: 768px) {
+
+}
+
+/*
+/* Desktop Styles (minimum 1024px)
+/*_______________________________________________________*/
+@media screen and (min-width: 1024px) {
+
+}

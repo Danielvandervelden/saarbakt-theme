@@ -353,7 +353,7 @@ html {
 
 body {
   font-size: 1.5rem;
-  background-color: #f2f2f0;
+  background-color: #FFF;
 }
 
 a {
@@ -370,6 +370,10 @@ a:hover {
   overflow: hidden;
 }
 
+.no-display {
+  display: none;
+}
+
 .clearfix:after {
   display: table;
   content: "";
@@ -384,16 +388,24 @@ h5,
 h6 {
   color: #c4174f;
   position: relative;
+  margin: 0;
+}
+
+p {
+  line-height: 2.4rem;
 }
 
 .page-title {
   text-align: center;
+  font-size: 2rem;
+  margin: 10px 0;
+  padding: 0 15px;
 }
 
 .title {
   position: relative;
   display: inline-block;
-  padding: 10px 70px;
+  padding: 15px 70px;
 }
 .title:before {
   content: "";
@@ -420,6 +432,40 @@ h6 {
 
 .main-content-wrapper {
   padding: 10px 15px;
+}
+
+.btn {
+  padding: 14px 45px;
+  border-radius: 4px;
+  max-width: 200px;
+  display: block;
+}
+.btn.btn-pink {
+  color: #FFF;
+  background-color: #e55175;
+  border: 0;
+  outline: 0;
+  box-shadow: 0;
+  transition: all 0.3s ease-in-out;
+}
+.btn.btn-pink .fa {
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  font-size: 1.3rem;
+}
+.btn.btn-pink:hover {
+  background-color: #efa1af;
+}
+.btn.btn-pink:hover .fa.fa-chevron-right {
+  transform: translateX(10px);
+  opacity: 1;
+}
+.btn.btn-pink:hover .fa.fa-chevron-left {
+  transform: translateX(-10px);
+  opacity: 1;
+}
+.btn.btn-pink.btn-right {
+  float: right;
 }
 
 /* Parts */
@@ -458,15 +504,106 @@ h6 {
   margin-right: 15px;
 }
 
-.sara-foto img {
-  max-width: 100%;
+.saarbaktlogo {
+  text-align: center;
 }
-
 .saarbaktlogo img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 400px;
   padding-top: 50px;
 }
 
+/*
+|------------------------------------------------------------
+| All styles for the footer.
+|------------------------------------------------------------
+*/
+/*
+/* Mobile Styles
+/*_______________________________________________________*/
+.footer {
+  padding: 10px 15px;
+  text-align: center;
+}
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer ul li {
+  padding: 0;
+  margin: 0;
+}
+.footer .contactgegevens {
+  margin-bottom: 15px;
+}
+.footer .footerlinks {
+  margin-bottom: 15px;
+}
+.footer .socialmediafooter {
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+/*
+/* Tablet Styles (minimum of 768px)
+/*_______________________________________________________*/
+/*
+/* Desktop Styles (minimum 1024px)
+/*_______________________________________________________*/
+/*
+|------------------------------------------------------------
+| All styles for the blog
+|------------------------------------------------------------
+*/
+/*
+/* Mobile Styles
+/*_______________________________________________________*/
+.single-blog-post,
+.receptenbox {
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto 20px auto;
+  box-shadow: 1px 1px 10px #efa1af;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.single-blog-post img,
+.receptenbox img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+}
+.single-blog-post .post-thumbnail a,
+.receptenbox .post-thumbnail a {
+  display: block;
+  text-align: center;
+}
+.single-blog-post .metabox,
+.receptenbox .metabox {
+  font-size: 1rem;
+}
+.single-blog-post .metabox p,
+.receptenbox .metabox p {
+  line-height: 16px;
+}
+.single-blog-post .post-content a h2,
+.receptenbox .post-content a h2 {
+  text-align: left;
+}
+
+.ingredientenflex img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+}
+
+/*
+/* Tablet Styles (minimum of 768px)
+/*_______________________________________________________*/
+/*
+/* Desktop Styles (minimum 1024px)
+/*_______________________________________________________*/
 /*
 |------------------------------------------------------------
 | All styling for the navigation.
@@ -483,7 +620,7 @@ h6 {
   width: 0;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
   opacity: 0;
   position: fixed;
   top: 0;
@@ -505,13 +642,12 @@ h6 {
   left: 0;
   z-index: 100;
   transform: translateX(-1000px);
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  padding: 10px 15px;
+  font-size: 1.8rem;
 }
 #mobile-menu.active {
   transform: translateX(0);
-}
-#mobile-menu h2 {
-  margin-left: 20px;
 }
 #mobile-menu .exit {
   position: absolute;
@@ -523,14 +659,10 @@ h6 {
   list-style: none;
   padding: 0;
 }
-#mobile-menu #menu-headermenu {
-  margin: 20px 0 0 10px;
-  padding: 10px;
-}
 #mobile-menu li {
   padding: 0;
   margin: 0;
-  line-height: 23px;
+  line-height: 30px;
 }
 #mobile-menu li a {
   font-weight: 400;
@@ -540,7 +672,7 @@ h6 {
   padding-right: 30px;
 }
 #mobile-menu .menu-item-has-children:after {
-  content: "";
+  content: "";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 1.8rem;
@@ -557,6 +689,7 @@ h6 {
 }
 #mobile-menu .sub-menu li {
   padding-left: 10px;
+  font-size: 1.6rem;
 }
 #mobile-menu .sub-menu li a {
   font-weight: 300;
@@ -573,5 +706,48 @@ h6 {
     display: block;
   }
 }
+/* Pages */
+/*
+|------------------------------------------------------------
+| All styles for the homepage specifically.
+|------------------------------------------------------------
+*/
+/*
+/* Mobile Styles
+/*_______________________________________________________*/
+.home .main-content-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.home .main-content {
+  flex: 0 1 40%;
+}
+.home .sara-foto {
+  flex: 0 1 40%;
+}
+.home .sara-foto img {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.home .nieuws-recepten {
+  padding: 10px 15px;
+}
+.home .nieuws-recepten h2 {
+  text-align: center;
+}
+
+/*
+/* Tablet Styles (minimum of 768px)
+/*_______________________________________________________*/
+@media screen and (min-width: 768px) {
+  body.home .main-content-wrapper {
+    flex-direction: row;
+  }
+}
+/*
+/* Desktop Styles (minimum 1024px)
+/*_______________________________________________________*/
 
 /*# sourceMappingURL=style.css.map */

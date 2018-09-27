@@ -1,0 +1,59 @@
+/*
+|------------------------------------------------------------
+| All styles for the homepage specifically.
+|------------------------------------------------------------
+*/
+
+/*
+/* Mobile Styles
+/*_______________________________________________________*/
+
+.home {
+
+    .main-content-wrapper {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .main-content {
+        flex: 0 1 40%;
+    }
+
+    .sara-foto {
+        flex: 0 1 40%;
+
+        img {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    }
+
+    .nieuws-recepten {
+        padding: $defaultSpacing;
+
+        h2 {
+            text-align: center;
+        }
+    }
+}
+
+/*
+/* Tablet Styles (minimum of 768px)
+/*_______________________________________________________*/
+@media screen and (min-width: 768px) {
+
+    body.home {
+        .main-content-wrapper {
+            flex-direction: row;
+        }
+    }
+}
+
+/*
+/* Desktop Styles (minimum 1024px)
+/*_______________________________________________________*/
+@media screen and (min-width: 1024px) {
+
+}
