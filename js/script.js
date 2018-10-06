@@ -3,9 +3,12 @@
 | All Javascript for the website.
 |------------------------------------------------------------
 */
+
 let $ = jQuery;
 let mainMenu = $('#menu-headermenu');
 let mobileMenuIcon = $('.mobile-menu-icon');
+
+console.log("WHAT");
 
 $(document).ready(function() {
     //#############################################################

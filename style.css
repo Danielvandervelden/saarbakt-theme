@@ -380,6 +380,15 @@ a:hover {
   clear: both;
 }
 
+.post-navigation {
+  text-align: center;
+  margin: 20px;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
 h1,
 h2,
 h3,
@@ -430,6 +439,10 @@ p {
   background-repeat: no-repeat;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .main-content-wrapper {
   padding: 10px 15px;
 }
@@ -445,7 +458,7 @@ p {
   background-color: #e55175;
   border: 0;
   outline: 0;
-  box-shadow: 0;
+  box-shadow: none;
   transition: all 0.3s ease-in-out;
 }
 .btn.btn-pink .fa {
@@ -466,6 +479,26 @@ p {
 }
 .btn.btn-pink.btn-right {
   float: right;
+}
+.btn.btn-full-width {
+  width: 100%;
+  max-width: none;
+}
+
+.spacing-top {
+  margin-top: 15px;
+}
+
+.spacing-right {
+  margin-right: 15px;
+}
+
+.spacing-bottom {
+  margin-bottom: 15px;
+}
+
+.spacing-left {
+  margin-left: 15px;
 }
 
 /* Parts */
@@ -522,7 +555,7 @@ p {
 /* Mobile Styles
 /*_______________________________________________________*/
 .footer {
-  padding: 10px 15px;
+  padding: 15px 15px;
   text-align: center;
 }
 .footer ul {
@@ -562,7 +595,6 @@ p {
 .single-blog-post,
 .receptenbox {
   width: 100%;
-  max-width: 500px;
   margin: 10px auto 20px auto;
   box-shadow: 1px 1px 10px #efa1af;
   padding: 15px;
@@ -573,6 +605,10 @@ p {
   width: 100%;
   height: auto;
   max-width: 300px;
+}
+.single-blog-post .post-thumbnail,
+.receptenbox .post-thumbnail {
+  margin-bottom: 10px;
 }
 .single-blog-post .post-thumbnail a,
 .receptenbox .post-thumbnail a {
@@ -590,6 +626,7 @@ p {
 .single-blog-post .post-content a h2,
 .receptenbox .post-content a h2 {
   text-align: left;
+  font-size: 2rem;
 }
 
 .ingredientenflex img {
@@ -732,7 +769,7 @@ p {
   margin: 0 auto;
 }
 .home .nieuws-recepten {
-  padding: 10px 15px;
+  padding: 15px 0;
 }
 .home .nieuws-recepten h2 {
   text-align: center;

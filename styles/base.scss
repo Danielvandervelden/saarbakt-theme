@@ -4,146 +4,187 @@
 |------------------------------------------------------------
 */
 html {
-    font-size: 62.5%;
-    color: #242424;
-    font-family: "Roboto", "Arial", "Times New Roman", "sans-serif";
-  }
-  
-body {
-    font-size: 1.5rem;
-    background-color: #FFF;
-  }
-  
-a {
-    color: $color2;
-    font-weight: 500;
-    text-decoration: none;
+	font-size: 62.5%;
+	color: #242424;
+	font-family: "Roboto", "Arial", "Times New Roman", "sans-serif";
+}
 
-    &:hover {
-        color: $color3;
-        font-weight: 500;
-      }
-  }
-  
+body {
+	font-size: 1.5rem;
+	background-color: #FFF;
+}
+
+a {
+	color: $color2;
+	font-weight: 500;
+	text-decoration: none;
+
+	&:hover {
+		color: $color3;
+		font-weight: 500;
+	}
+}
+
 .no-scroll {
-    overflow: hidden;
-  }
+	overflow: hidden;
+}
 
 .no-display {
-  display: none;
+	display: none;
 }
-  
+
 .clearfix:after {
-    display: table;
-    content: "";
-    clear: both;
-  }
+	display: table;
+	content: "";
+	clear: both;
+}
 
-  //#############################################################
-  // Typography
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: $color1;
-    position: relative;
-    margin: 0;
-  }
+.post-navigation {
+	text-align: center;
+	margin: 20px;
+}
 
-  p {
-    line-height: 2.4rem;
-  }
-  
-  .page-title {
-    text-align: center;
-    font-size: 2rem;
-    margin: 10px 0;
-    padding: 0 15px;
-  }
-  
-  .title {
-    position: relative;
-    display: inline-block;
-    padding: 15px 70px;
+.inline-block {
+	display: inline-block;
+}
 
-    &:before {
-        content: "";
-        width: 60px;
-        height: 50px;
-        position: absolute;
-        left: 0;
-        top: 0;
-        background-image: url("/wp-content/themes/saarbakt/images/swirl-left.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
+//#############################################################
+// Typography
 
-      &:after {
-        content: "";
-        width: 60px;
-        height: 50px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        background-image: url("/wp-content/themes/saarbakt/images/swirl-right.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-      }    
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $color1;
+	position: relative;
+	margin: 0;
+}
 
-  //#############################################################
+p {
+	line-height: 2.4rem;
+}
 
-  //#############################################################
-  // Containers
+.page-title {
+	text-align: center;
+	font-size: 2rem;
+	margin: 10px 0;
+	padding: 0 15px;
+}
 
-  .main-content-wrapper {
-    padding: $containerSpacing;
-  }
+.title {
+	position: relative;
+	display: inline-block;
+	padding: 15px 70px;
 
-  //#############################################################
+	&:before {
+		content: "";
+		width: 60px;
+		height: 50px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-image: url("/wp-content/themes/saarbakt/images/swirl-left.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
 
-  //#############################################################
-  // Buttons
-  
-  .btn {
-    padding: 14px 45px;
-    border-radius: 4px;
-    max-width: 200px;
-    display: block;
+	&:after {
+		content: "";
+		width: 60px;
+		height: 50px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		background-image: url("/wp-content/themes/saarbakt/images/swirl-right.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+}
 
-    &.btn-pink {
-      color: #FFF;
-      background-color: $color2;
-      border: 0;
-      outline: 0;
-      box-shadow: 0;
-      transition: all .3s ease-in-out;
+.text-center {
+	text-align: center;
+}
 
-      .fa {
-        transition: all .3s ease-in-out;
-        opacity: 0;
-        font-size: 1.3rem;
-      }
+//#############################################################
 
-      &:hover {
-        background-color: $color3;
-        .fa.fa-chevron-right {
-          transform: translateX(10px);
-          opacity: 1;
-        }
-        .fa.fa-chevron-left {
-          transform: translateX(-10px);
-          opacity: 1;
-        }
-      }
+//#############################################################
+// Containers
 
-      &.btn-right {
-        float: right;
-      }
-    }
-  }
+.main-content-wrapper {
+	padding: $containerSpacing;
+}
 
-  //#############################################################
+//#############################################################
+
+//#############################################################
+// Buttons
+
+.btn {
+	padding: 14px 45px;
+	border-radius: 4px;
+	max-width: 200px;
+	display: block;
+
+	&.btn-pink {
+		color: #FFF;
+		background-color: $color2;
+		border: 0;
+		outline: 0;
+		box-shadow: none;
+		transition: all .3s ease-in-out;
+
+		.fa {
+			transition: all .3s ease-in-out;
+			opacity: 0;
+			font-size: 1.3rem;
+		}
+
+		&:hover {
+			background-color: $color3;
+
+			.fa.fa-chevron-right {
+				transform: translateX(10px);
+				opacity: 1;
+			}
+
+			.fa.fa-chevron-left {
+				transform: translateX(-10px);
+				opacity: 1;
+			}
+		}
+
+		&.btn-right {
+			float: right;
+		}
+	}
+
+	&.btn-full-width {
+		width: 100%;
+		max-width: none;
+	}
+}
+
+//#############################################################
+
+//#############################################################
+// Spacing
+
+.spacing-top {
+	margin-top: 15px;
+}
+
+.spacing-right {
+	margin-right: 15px;
+}
+
+.spacing-bottom {
+	margin-bottom: 15px;
+}
+
+.spacing-left {
+	margin-left: 15px;
+}
+
+//#############################################################

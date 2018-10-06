@@ -11,7 +11,6 @@
 .single-blog-post,
 .receptenbox {
     width: 100%;
-    max-width: 500px; // fix this later in desktop;
     margin: 10px auto 20px auto;
     box-shadow: 1px 1px 10px $color3;
     padding: 15px;
@@ -24,6 +23,7 @@
     }
 
     .post-thumbnail {
+        margin-bottom: 10px;
 
         a {
             display: block; // basically, make it as high as the image... some sort of clearfix if you will.
@@ -43,6 +43,7 @@
 
         a h2 {
             text-align: left;
+            font-size: 2rem;
         }
     }
 }

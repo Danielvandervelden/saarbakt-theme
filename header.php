@@ -77,8 +77,14 @@ else if ($header_image === NULL) {
 			<a href="<?php echo site_url("/Home") ?>"><img src="<?php echo get_theme_file_uri('images/Saarbaktlogoheader.png')?>"></a>
 		</div>
 	</div>
-
+ 
+	<?php if(is_home()) { ?>
+		<h2 class="page-title"><span class="title">Alle baksels</span></h2>
+	<?php } else if (is_category()) { ?>
+		<h2 class="page-title"><span class="title"><?php single_cat_title(); ?></span></h2>
+	<?php } else { ?>
 		<h2 class="page-title"><span class="title"><?php if ( have_posts() ) : while ( have_posts() ) : the_post(); the_title(); endwhile;
 		else: ?>
 		<p> <?php _e('Sorry, no posts matched your criteria.'); ?></p>
-	<?php endif; ?></span></h2>
+		<?php endif; ?></span></h2>
+	<?php } ?>

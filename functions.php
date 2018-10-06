@@ -1,5 +1,4 @@
-<?php
-
+<?php 
 // LOAD ALL THE THEME SCRIPTS AND STYLES!!!
 
 require get_theme_file_path('/inc/search-route.php');
@@ -7,7 +6,9 @@ require get_theme_file_path('/inc/search-route.php');
 function saarbakt_files() {
 	wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 	wp_enqueue_style('style.css', get_stylesheet_uri());
-	wp_enqueue_script('main-saarbakt-js', get_theme_file_uri('/js/script.js'), array('jquery'), NULL, '1.0', true);
+
+	wp_register_script("main javascript", get_bloginfo("stylesheet_directory") . "js/script.js");
+	wp_enqueue_script('main-saarbakt-js', get_theme_file_uri('js/script.js'), array('jquery'), NULL, '1.0', true);
 	wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.3.1/css/all.css');
 	wp_localize_script('main-saarbakt-js', 'saarbaktData', array(
 		'root_url' => get_site_url(),
@@ -29,12 +30,3 @@ function saarbakt_features() {
 	add_post_type_support( 'page', 'excerpt' );
 }
 add_action('after_setup_theme', 'saarbakt_features');
-
-function frontpagetextID() {
-	$args = array( 'post_type' => 'frontpagetext');
-
-	$loop = new WP_Query( $args );
-	while ( $loop->have_posts() ) : $loop->the_post();
-	get_the_ID();
-	endwhile;
-}
