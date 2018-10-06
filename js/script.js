@@ -7,8 +7,9 @@
 let $ = jQuery;
 let mainMenu = $('#menu-headermenu');
 let mobileMenuIcon = $('.mobile-menu-icon');
-
-console.log("WHAT");
+let searchIcon = $('.search-icon');
+let searchDiv = $('.search-overlay');
+let searchClose = $('#search-close');
 
 $(document).ready(function() {
     //#############################################################
@@ -48,6 +49,14 @@ $(document).ready(function() {
         $('#mobile-menu').removeClass('active');
         $('#backdrop').removeClass('active');
         $('html').removeClass('no-scroll');
+    })
+
+    $(searchIcon).click(function(e) {
+        $(searchDiv).fadeIn();
+    })
+
+    $(searchClose).click(function() {
+        $(searchDiv).fadeOut();
     })
 
     //#############################################################
