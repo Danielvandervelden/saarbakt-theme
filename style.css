@@ -743,6 +743,49 @@ p {
     display: block;
   }
 }
+/*
+|------------------------------------------------------------
+| All styles for the search overlay!
+|------------------------------------------------------------
+*/
+/*
+/* Desktop Styles
+/*_______________________________________________________*/
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 100vh;
+  width: 100vw;
+  z-index: 99999;
+}
+.search-overlay .search-overlay__top {
+  width: 100%;
+  margin: 75px 0 0 0;
+  text-align: center;
+}
+.search-overlay .search-overlay__top i {
+  font-size: 3rem;
+  color: #c4174f;
+  line-height: 4rem;
+  vertical-align: middle;
+}
+.search-overlay .search-overlay__top i:before {
+  height: 4rem;
+}
+.search-overlay .search-overlay__top input {
+  width: 70%;
+  border: none;
+  box-shadow: none;
+  min-height: 4rem;
+  padding: 0 10px;
+  outline: 0;
+}
+
+/*
+/* Tablet/Mobile Styles (up to 768px)
+/*_______________________________________________________*/
 /* Pages */
 /*
 |------------------------------------------------------------
