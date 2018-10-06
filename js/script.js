@@ -10,6 +10,11 @@ let mobileMenuIcon = $('.mobile-menu-icon');
 let searchIcon = $('.search-icon');
 let searchDiv = $('.search-overlay');
 let searchClose = $('#search-close');
+let searchInput = $('.search-term');
+let searchTerm;
+let spinner = $('<div class="spinner"><div class="cube1"></div><div class="cube2"></div></div>');
+let timeout = null;
+let loader = false;
 
 $(document).ready(function() {
     //#############################################################
@@ -51,12 +56,34 @@ $(document).ready(function() {
         $('html').removeClass('no-scroll');
     })
 
+    //#############################################################
+
+    //#############################################################
+    // All Javascript for the search!
+
     $(searchIcon).click(function(e) {
         $(searchDiv).fadeIn();
-    })
+        $(searchInput).focus();
+    });
 
     $(searchClose).click(function() {
+        setTimeout(function() {$(searchInput).val('')}, 300);
         $(searchDiv).fadeOut();
+    });
+
+    $(searchInput).on('input', function(e) {
+        clearTimeout(timeout);
+        if(!loader) {
+        $('.search-container').append(spinner);
+        }
+        loader = true;
+
+        timeout = setTimeout(function() {
+            searchTerm = e.target.value;
+            console.log(searchTerm);
+            $(spinner).remove();
+            loader = false;
+        }, 500);
     })
 
     //#############################################################
