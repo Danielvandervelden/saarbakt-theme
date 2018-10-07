@@ -94,46 +94,46 @@ p {
 	display: inline-block;
 	padding: 15px 70px;
 
-	&:before {
-		content: "";
-		width: 35px;
-		height: 50px;
-		position: absolute;
-		left: 0;
-		top: 0;
-		background-image: url("/wp-content/themes/saarbakt/images/cookieman.png");
-		background-size: contain;
-		background-repeat: no-repeat;
-	}
+	// &:before {
+	// 	content: "";
+	// 	width: 35px;
+	// 	height: 50px;
+	// 	position: absolute;
+	// 	left: 0;
+	// 	top: 0;
+	// 	background-image: url("/wp-content/themes/saarbakt/images/cookieman.png");
+	// 	background-size: contain;
+	// 	background-repeat: no-repeat;
+	// }
 
-	&:after {
-		content: "";
-		width: 35px;
-		height: 50px;
-		position: absolute;
-		right: 0;
-		top: 0;
-		background-image: url("/wp-content/themes/saarbakt/images/cookieman.png");
-		background-size: contain;
-		background-repeat: no-repeat;
-	}
+	// &:after {
+	// 	content: "";
+	// 	width: 35px;
+	// 	height: 50px;
+	// 	position: absolute;
+	// 	right: 0;
+	// 	top: 0;
+	// 	background-image: url("/wp-content/themes/saarbakt/images/cookieman.png");
+	// 	background-size: contain;
+	// 	background-repeat: no-repeat;
+	// }
 }
 
 @media screen and (min-width: 1024px) {
 	.page-title {
 		font-size: 4rem;
 
-		.title {
-			&:before {
-				height: 80px;
-				width: 60px;
-			}
+		// .title {
+		// 	&:before {
+		// 		height: 80px;
+		// 		width: 60px;
+		// 	}
 			
-			&:after{
-				height: 80px;
-				width: 60px;
-			}
-		}
+		// 	&:after{
+		// 		height: 80px;
+		// 		width: 60px;
+		// 	}
+		// }
 	}
 
 	h2 {
