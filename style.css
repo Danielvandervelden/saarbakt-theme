@@ -710,6 +710,7 @@ p {
 .single-blog-post .post-content,
 .receptenbox .post-content {
   position: relative;
+  padding-bottom: 45px;
 }
 .single-blog-post .post-content a h2,
 .receptenbox .post-content a h2 {
@@ -1242,9 +1243,13 @@ body.home .nieuws-recepten .nieuws-homepage .post-thumbnail {
     margin: 0 auto 10px auto;
     flex: 0 1 35%;
   }
+  body.home .nieuws-recepten .recepten-frontpage .post-thumbnail + .post-content,
+body.home .nieuws-recepten .nieuws-homepage .post-thumbnail + .post-content {
+    flex: 0 1 60%;
+  }
   body.home .nieuws-recepten .recepten-frontpage .post-content,
 body.home .nieuws-recepten .nieuws-homepage .post-content {
-    flex: 0 1 60%;
+    flex: 0 1 100%;
   }
   body.home .nieuws-recepten > .main-content-wrapper {
     flex-direction: column;
