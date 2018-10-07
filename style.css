@@ -430,12 +430,26 @@ p {
 .title {
   position: relative;
   display: inline-block;
-  padding: 15px 70px;
+  padding: 15px 40px;
+}
+.title:after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  background-image: url("/wp-content/themes/saarbakt/images/heart.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 @media screen and (min-width: 1024px) {
   .page-title {
     font-size: 4rem;
+  }
+  .page-title .title:after {
+    top: 23px;
   }
 
   h2 {
