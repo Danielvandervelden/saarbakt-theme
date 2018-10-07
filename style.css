@@ -1237,14 +1237,20 @@ body.home .nieuws-recepten .nieuws-homepage {
     display: flex;
     flex: 0 1 45%;
   }
+  body.home .nieuws-recepten .recepten-frontpage .single-blog-post,
+body.home .nieuws-recepten .nieuws-homepage .single-blog-post {
+    flex-direction: row;
+    justify-content: space-between;
+  }
   body.home .nieuws-recepten .recepten-frontpage .post-thumbnail,
 body.home .nieuws-recepten .nieuws-homepage .post-thumbnail {
     max-width: 200px;
     margin: 0 auto 10px auto;
+    flex: 0 1 35%;
   }
-  body.home .nieuws-recepten .recepten-frontpage .single-blog-post,
-body.home .nieuws-recepten .nieuws-homepage .single-blog-post {
-    flex-direction: row;
+  body.home .nieuws-recepten .recepten-frontpage .post-content,
+body.home .nieuws-recepten .nieuws-homepage .post-content {
+    flex: 0 1 60%;
   }
   body.home .nieuws-recepten > .main-content-wrapper {
     flex-direction: column;

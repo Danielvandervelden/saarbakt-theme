@@ -65,13 +65,19 @@
                 display: flex;
                 flex: 0 1 45%;
 
+                .single-blog-post {
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+
                 .post-thumbnail {
                     max-width: 200px;
                     margin: 0 auto 10px auto;
+                    flex: 0 1 35%;
                 }
 
-                .single-blog-post {
-                    flex-direction: row;
+                .post-content {
+                    flex: 0 1 60%;
                 }
             }
 
