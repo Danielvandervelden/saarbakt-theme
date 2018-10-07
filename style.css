@@ -439,7 +439,7 @@ p {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url("/wp-content/themes/saarbakt/images/swirl-left.png");
+  background-image: url("/wp-content/themes/saarbakt/images/cookieman.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -450,7 +450,7 @@ p {
   position: absolute;
   right: 0;
   top: 0;
-  background-image: url("/wp-content/themes/saarbakt/images/swirl-right.png");
+  background-image: url("/wp-content/themes/saarbakt/images/cookieman.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -499,14 +499,18 @@ p {
     flex: 0 1 45%;
   }
 }
-.btn {
+.btn,
+.wpcf7-submit {
   padding: 14px 45px;
   border-radius: 4px;
   max-width: 200px;
   display: block;
   cursor: pointer;
 }
-.btn.btn-pink {
+.btn.btn-pink,
+.btn .wpcf7-submit,
+.wpcf7-submit.btn-pink,
+.wpcf7-submit .wpcf7-submit {
   color: #FFF;
   background-color: #e55175;
   border: 0;
@@ -514,31 +518,48 @@ p {
   box-shadow: none;
   transition: all 0.3s ease-in-out;
 }
-.btn.btn-pink .fa {
+.btn.btn-pink .fa,
+.btn .wpcf7-submit .fa,
+.wpcf7-submit.btn-pink .fa,
+.wpcf7-submit .wpcf7-submit .fa {
   transition: all 0.3s ease-in-out;
   opacity: 0;
   font-size: 1.3rem;
 }
-.btn.btn-pink:hover {
+.btn.btn-pink:hover,
+.btn .wpcf7-submit:hover,
+.wpcf7-submit.btn-pink:hover,
+.wpcf7-submit .wpcf7-submit:hover {
   background-color: #efa1af;
 }
-.btn.btn-pink:hover .fa.fa-chevron-right {
+.btn.btn-pink:hover .fa.fa-chevron-right,
+.btn .wpcf7-submit:hover .fa.fa-chevron-right,
+.wpcf7-submit.btn-pink:hover .fa.fa-chevron-right,
+.wpcf7-submit .wpcf7-submit:hover .fa.fa-chevron-right {
   transform: translateX(10px);
   opacity: 1;
 }
-.btn.btn-pink:hover .fa.fa-chevron-left {
+.btn.btn-pink:hover .fa.fa-chevron-left,
+.btn .wpcf7-submit:hover .fa.fa-chevron-left,
+.wpcf7-submit.btn-pink:hover .fa.fa-chevron-left,
+.wpcf7-submit .wpcf7-submit:hover .fa.fa-chevron-left {
   transform: translateX(-10px);
   opacity: 1;
 }
-.btn.btn-pink.btn-right {
+.btn.btn-pink.btn-right,
+.btn .wpcf7-submit.btn-right,
+.wpcf7-submit.btn-pink.btn-right,
+.wpcf7-submit .wpcf7-submit.btn-right {
   float: right;
 }
-.btn.btn-full-width {
+.btn.btn-full-width,
+.wpcf7-submit.btn-full-width {
   width: 100%;
   max-width: none;
 }
 @media (min-width: 1024px) {
-  .btn.btn-full-width {
+  .btn.btn-full-width,
+.wpcf7-submit.btn-full-width {
     width: auto;
   }
 }

@@ -101,7 +101,7 @@ p {
 		position: absolute;
 		left: 0;
 		top: 0;
-		background-image: url("/wp-content/themes/saarbakt/images/swirl-left.png");
+		background-image: url("/wp-content/themes/saarbakt/images/cookieman.png");
 		background-size: contain;
 		background-repeat: no-repeat;
 	}
@@ -113,7 +113,7 @@ p {
 		position: absolute;
 		right: 0;
 		top: 0;
-		background-image: url("/wp-content/themes/saarbakt/images/swirl-right.png");
+		background-image: url("/wp-content/themes/saarbakt/images/cookieman.png");
 		background-size: contain;
 		background-repeat: no-repeat;
 	}
@@ -180,14 +180,16 @@ p {
 //#############################################################
 // Buttons
 
-.btn {
+.btn,
+.wpcf7-submit {
 	padding: 14px 45px;
 	border-radius: 4px;
 	max-width: 200px;
 	display: block;
 	cursor: pointer;
 
-	&.btn-pink {
+	&.btn-pink,
+	.wpcf7-submit {
 		color: #FFF;
 		background-color: $color2;
 		border: 0;

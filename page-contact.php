@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	<div class="main-content-wrapper">
+	<div class="main-content-wrapper contact">
 		<div class="single-blog-post">
 			<?php if (have_posts()) : while (have_posts()) : the_post(); the_content(); endwhile;
 				else: ?>
