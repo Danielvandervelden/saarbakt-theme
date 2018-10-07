@@ -27,12 +27,12 @@ get_header();
  </div>
 <?php  } ?>
 
-<div class="post-navigation">
-      <?php posts_nav_link(); ?>
-</div>
+  	<div class="post-navigation">
+      	<?php posts_nav_link(); ?>
+	</div>
 
 </div>
-	<?php echo get_template_part('template-parts/instagram-feed') ?>
+	<?php echo get_template_part('template-parts/instagram'); ?>
 </div>
 
 <?php

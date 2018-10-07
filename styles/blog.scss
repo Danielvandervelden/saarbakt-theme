@@ -66,11 +66,9 @@
 /*_______________________________________________________*/
 @media screen and (min-width: 1024px) {
 
+    .single-blog-post.tips-tricks,
+    .category .single-blog-post,
     .blog .single-blog-post {
-        display: flex;
-    }
-
-    .single-blog-post.tips-tricks {
         display: flex;
     }
 

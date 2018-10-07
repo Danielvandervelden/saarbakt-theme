@@ -719,11 +719,9 @@ p {
 /* Desktop Styles (minimum 1024px)
 /*_______________________________________________________*/
 @media screen and (min-width: 1024px) {
-  .blog .single-blog-post {
-    display: flex;
-  }
-
-  .single-blog-post.tips-tricks {
+  .single-blog-post.tips-tricks,
+.category .single-blog-post,
+.blog .single-blog-post {
     display: flex;
   }
 
