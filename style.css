@@ -482,17 +482,20 @@ p {
 
 @media screen and (min-width: 1024px) {
   .blog .main-content-wrapper,
-.page-template-default .main-content-wrapper {
+.page-template-default .main-content-wrapper,
+.category .main-content-wrapper {
     display: flex;
     justify-content: space-around;
   }
   .blog .main-content-wrapper .blogpost,
-.page-template-default .main-content-wrapper .blogpost {
+.page-template-default .main-content-wrapper .blogpost,
+.category .main-content-wrapper .blogpost {
     flex: 0 1 45%;
     margin-right: 5%;
   }
   .blog .main-content-wrapper .instagramfeed,
-.page-template-default .main-content-wrapper .instagramfeed {
+.page-template-default .main-content-wrapper .instagramfeed,
+.category .main-content-wrapper .instagramfeed {
     flex: 0 1 45%;
   }
 }
