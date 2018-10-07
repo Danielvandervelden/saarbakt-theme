@@ -13,6 +13,7 @@
 			$mainQuery = new WP_Query(array(
 				'post_type' => array('post', 'page', 'nieuwtje', 'tipstricks'),
 				's' => sanitize_text_field($data['term']),
+				'posts_per_page' => 100
 			)); 
 
 			$results = array(
@@ -24,7 +25,7 @@
 			while($mainQuery->have_posts()) {
 				$mainQuery->the_post();
 
-				if (get_post_type() == 'post' OR get_post_type() =='page') {
+				if (get_post_type() == 'post' OR get_post_type() == 'page') {
 				array_push($results['generalInfo'], array(
 					'title' => get_the_title(),
 					'excerpt' => wp_trim_words(get_the_content(), 20),

@@ -360,6 +360,7 @@ a {
   color: #e55175;
   font-weight: 500;
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 a:hover {
   color: #efa1af;
@@ -389,6 +390,17 @@ a:hover {
   display: inline-block;
 }
 
+.wp-video {
+  width: 100% !important;
+  max-width: 600px !important;
+  margin: 0 auto !important;
+  height: auto !important;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -398,6 +410,10 @@ h6 {
   color: #c4174f;
   position: relative;
   margin: 0;
+}
+
+h2 {
+  font-size: 1.8rem;
 }
 
 p {
@@ -418,7 +434,7 @@ p {
 }
 .title:before {
   content: "";
-  width: 60px;
+  width: 35px;
   height: 50px;
   position: absolute;
   left: 0;
@@ -429,7 +445,7 @@ p {
 }
 .title:after {
   content: "";
-  width: 60px;
+  width: 35px;
   height: 50px;
   position: absolute;
   right: 0;
@@ -439,6 +455,23 @@ p {
   background-repeat: no-repeat;
 }
 
+@media screen and (min-width: 1024px) {
+  .page-title {
+    font-size: 4rem;
+  }
+  .page-title .title:before {
+    height: 80px;
+    width: 60px;
+  }
+  .page-title .title:after {
+    height: 80px;
+    width: 60px;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+}
 .text-center {
   text-align: center;
 }
@@ -447,11 +480,28 @@ p {
   padding: 10px 15px;
 }
 
+@media screen and (min-width: 1024px) {
+  .blog .main-content-wrapper,
+.page-template-default .main-content-wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+  .blog .main-content-wrapper .blogpost,
+.page-template-default .main-content-wrapper .blogpost {
+    flex: 0 1 45%;
+    margin-right: 5%;
+  }
+  .blog .main-content-wrapper .instagramfeed,
+.page-template-default .main-content-wrapper .instagramfeed {
+    flex: 0 1 45%;
+  }
+}
 .btn {
   padding: 14px 45px;
   border-radius: 4px;
   max-width: 200px;
   display: block;
+  cursor: pointer;
 }
 .btn.btn-pink {
   color: #FFF;
@@ -483,6 +533,11 @@ p {
 .btn.btn-full-width {
   width: 100%;
   max-width: none;
+}
+@media (min-width: 1024px) {
+  .btn.btn-full-width {
+    width: auto;
+  }
 }
 
 .spacing-top {
@@ -544,6 +599,10 @@ p {
   width: 100%;
   max-width: 400px;
   padding-top: 50px;
+  transition: all 0.3s ease-in-out;
+}
+.saarbaktlogo img:hover {
+  opacity: 0.7;
 }
 
 /*
@@ -579,11 +638,28 @@ p {
 }
 
 /*
-/* Tablet Styles (minimum of 768px)
+/* Desktop Styles (minimum of 768px)
 /*_______________________________________________________*/
-/*
-/* Desktop Styles (minimum 1024px)
-/*_______________________________________________________*/
+@media screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer .contactgegevens {
+    flex: 0 1 30%;
+    margin-bottom: 0px;
+  }
+  .footer .footerlinks {
+    flex: 0 1 30%;
+    margin-bottom: 0px;
+  }
+  .footer .socialmediafooter {
+    flex: 0 1 30%;
+    margin-bottom: 0px;
+    font-size: 2rem;
+  }
+}
 /*
 |------------------------------------------------------------
 | All styles for the blog
@@ -605,6 +681,8 @@ p {
   width: 100%;
   height: auto;
   max-width: 300px;
+  margin: 0 auto;
+  display: block;
 }
 .single-blog-post .post-thumbnail,
 .receptenbox .post-thumbnail {
@@ -633,14 +711,52 @@ p {
   width: 100%;
   height: auto;
   max-width: 300px;
+  margin: 0 auto;
+  display: block;
 }
 
 /*
-/* Tablet Styles (minimum of 768px)
-/*_______________________________________________________*/
-/*
 /* Desktop Styles (minimum 1024px)
 /*_______________________________________________________*/
+@media screen and (min-width: 1024px) {
+  .blog .single-blog-post {
+    display: flex;
+  }
+
+  .single-blog-post.tips-tricks {
+    display: flex;
+  }
+
+  .single-blog-post {
+    display: block;
+    justify-content: space-around;
+  }
+  .single-blog-post .post-thumbnail {
+    flex: 0 1 28%;
+  }
+  .single-blog-post .post-thumbnail + .post-content {
+    flex: 0 1 68%;
+  }
+
+  .main-content-wrapper.nieuwtjes .single-blog-post {
+    flex-direction: column;
+  }
+
+  .singleblogpostflexbox {
+    display: flex;
+    justify-content: space-between;
+  }
+  .singleblogpostflexbox .single-blog-post {
+    display: block;
+    flex: 0 1 70%;
+    margin-right: 5%;
+    margin: 15px 0 15px 0;
+  }
+  .singleblogpostflexbox .receptenbox {
+    flex: 0 0 25%;
+    margin: 15px 0 15px;
+  }
+}
 /*
 |------------------------------------------------------------
 | All styling for the navigation.
@@ -735,12 +851,107 @@ p {
 /* Desktop Styles (minimum 1024px)
   /*_______________________________________________________*/
 @media screen and (min-width: 1024px) {
-  #mobile-menu {
+  #mobile-menu,
+.mobile-menu-icon {
     display: none;
+  }
+
+  body .header-container #nav-bar {
+    height: 40px;
+    padding: 0;
+  }
+  body .header-container #nav-bar .search-icon {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  body .header-container #nav-bar .search-icon:hover {
+    color: #c4174f;
   }
 
   .navigationdesktop {
     display: block;
+    height: inherit;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+  }
+  .navigationdesktop .current-menu-item a {
+    position: relative;
+  }
+  .navigationdesktop .current-menu-item a:after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #e55175;
+  }
+  .navigationdesktop .main-nav {
+    height: inherit;
+  }
+  .navigationdesktop ul#menu-headermenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    height: inherit;
+  }
+  .navigationdesktop ul#menu-headermenu li {
+    flex: 0 1 20%;
+    position: relative;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .navigationdesktop ul#menu-headermenu li > a {
+    transition: all 0.3s ease-in-out;
+  }
+  .navigationdesktop ul#menu-headermenu li .sub-menu {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -999;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    padding: 0;
+    list-style: none;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    max-width: 100%;
+    max-height: 700px;
+    overflow-y: scroll;
+  }
+  .navigationdesktop ul#menu-headermenu li .sub-menu li {
+    width: 100%;
+    padding: 10px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    height: 40px;
+    box-sizing: border-box;
+  }
+  .navigationdesktop ul#menu-headermenu li:hover .sub-menu {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    overflow-y: scroll;
+  }
+  .navigationdesktop ul#menu-headermenu li:hover .sub-menu li {
+    display: block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-sizing: border-box;
   }
 }
 /*
@@ -755,10 +966,11 @@ p {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.85);
   height: 100vh;
   width: 100vw;
   z-index: 99999;
+  overflow: scroll;
 }
 .search-overlay .search-overlay__top {
   width: 100%;
@@ -782,13 +994,36 @@ p {
   padding: 0 10px;
   outline: 0;
 }
+.search-overlay .search-container {
+  padding: 10px 15px;
+}
+.search-overlay .search-overlay__results {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.search-overlay .one-third {
+  flex: 0 1 30%;
+}
+.search-overlay .one-third ul {
+  padding: 0;
+  margin: 10px 0;
+  list-style: none;
+  text-align: left;
+}
+.search-overlay .one-third ul li {
+  padding: 0;
+  margin: 0;
+}
 .search-overlay .spinner {
   margin: 100px auto;
   width: 40px;
   height: 40px;
   position: relative;
 }
-.search-overlay .cube1, .search-overlay .cube2 {
+.search-overlay .cube1,
+.search-overlay .cube2 {
   background-color: #333;
   width: 15px;
   height: 15px;
@@ -842,6 +1077,16 @@ p {
 /*
 /* Tablet/Mobile Styles (up to 768px)
 /*_______________________________________________________*/
+@media screen and (min-width: 1024px) {
+  body .search-container .search-overlay__results {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  body .search-container .search-overlay__results .one-third {
+    flex: 0 1 30%;
+  }
+}
 /* Pages */
 /*
 |------------------------------------------------------------
@@ -858,17 +1103,22 @@ p {
 }
 .home .main-content {
   flex: 0 1 40%;
+  align-self: center;
 }
 .home .sara-foto {
   flex: 0 1 40%;
+  text-align: center;
 }
 .home .sara-foto img {
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
   margin: 0 auto;
 }
 .home .nieuws-recepten {
   padding: 15px 0;
+}
+.home .nieuws-recepten .single-blog-post {
+  display: flex;
 }
 .home .nieuws-recepten h2 {
   text-align: center;
@@ -880,6 +1130,24 @@ p {
 @media screen and (min-width: 768px) {
   body.home .main-content-wrapper {
     flex-direction: row;
+  }
+  body.home .nieuws-recepten {
+    display: flex;
+    justify-content: space-around;
+  }
+  body.home .nieuws-recepten .recepten-frontpage,
+body.home .nieuws-recepten .nieuws-homepage {
+    display: flex;
+    flex: 0 1 45%;
+  }
+  body.home .nieuws-recepten .recepten-frontpage .post-thumbnail,
+body.home .nieuws-recepten .nieuws-homepage .post-thumbnail {
+    max-width: 200px;
+    margin: 0 auto 10px auto;
+  }
+  body.home .nieuws-recepten > .main-content-wrapper {
+    flex-direction: column;
+    height: 100%;
   }
 }
 /*

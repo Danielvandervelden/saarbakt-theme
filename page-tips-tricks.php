@@ -9,7 +9,7 @@
 		));
 		while($tipstricks->have_posts()) {
 			$tipstricks->the_post(); ?>
-			<div class="single-blog-post">
+			<div class="single-blog-post tips-tricks">
 				<div class="post-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnailimage'); ?></a></div>
 
 			<div class="post-content">
@@ -24,10 +24,10 @@
 		   </div>
 		 </div>
 		<?php  } ?>
-	</div>
-
-	<div class="post-navigation">
-    	<?php posts_nav_link(); ?>
+		
+		<div class="post-navigation">
+    		<?php posts_nav_link(); ?>
+		</div>
 	</div>
 	<?php echo get_template_part('template-parts/instagram'); ?>
 </div>

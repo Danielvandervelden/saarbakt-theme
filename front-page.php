@@ -18,7 +18,7 @@ get_header();
 </div>
 
 <div class="nieuws-recepten">
-	<div class="recepten-frontpage">
+	<div class="recepten-frontpage main-content-wrapper">
 		<?php
 
 		$homepagePosts = new WP_Query(array(
@@ -54,7 +54,7 @@ get_header();
 
 		</div>
 
-		<div class="nieuws-homepage">
+		<div class="nieuws-homepage main-content-wrapper">
 				<?php $nieuwtjes = new Wp_Query(array(
 					'posts_per_page' => 1,
 					'post_type' => 'nieuwtje',
@@ -63,8 +63,9 @@ get_header();
 					$nieuwtjes->the_post(); ?>
 					<h2>Meest recente nieuws</h2>
 					<div class="single-blog-post">
+						<?php if(get_the_post_thumbnail()) { ?>
 						<div class="post-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnailimage'); ?></a></div>
-						
+						<?php } ?>
 						<div class="post-content">
 							<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
 

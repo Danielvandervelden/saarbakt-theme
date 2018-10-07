@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="main-content-wrapper">
-	<div class="navigationblog">
+<div class="navigationblog">
 		<div class="backbuttonblog">
 			<form action="<?php echo site_url('/recepten') ?>">
 				<button class="btn btn-pink btn-full-width" type="submit"><i class="fa fa-chevron-left" aria-hidden="true"></i> Terug naar Recepten</button>

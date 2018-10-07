@@ -38,15 +38,29 @@
 }
 
 /*
-/* Tablet Styles (minimum of 768px)
+/* Desktop Styles (minimum of 768px)
 /*_______________________________________________________*/
 @media screen and (min-width: 768px) {
 
-}
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
 
-/*
-/* Desktop Styles (minimum 1024px)
-/*_______________________________________________________*/
-@media screen and (min-width: 1024px) {
-
+        .contactgegevens {
+            flex: 0 1 30%;
+            margin-bottom: 0px;
+        }
+    
+        .footerlinks {
+            flex: 0 1 30%;
+            margin-bottom: 0px;
+        }
+    
+        .socialmediafooter {
+            flex: 0 1 30%;
+            margin-bottom: 0px;
+            font-size: 2rem;
+        }
+    }
 }

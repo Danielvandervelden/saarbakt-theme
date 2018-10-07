@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-  <div class="main-content-wrapper">
+  <div class="main-content-wrapper nieuwtjes">
     <div class="blogpost">
       <?php $nieuwtjes = new Wp_Query(array(
                 'posts_per_page' => 4,
@@ -24,10 +24,10 @@
         </div>
       </div>
       <?php  } ?>
-    </div>
 
     <div class="post-navigation">
       <?php posts_nav_link(); ?>
+    </div>
     </div>
 
     <?php echo get_template_part('template-parts/instagram'); ?>

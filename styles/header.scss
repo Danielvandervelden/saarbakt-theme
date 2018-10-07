@@ -44,5 +44,10 @@
         width: 100%;
         max-width: 400px;
         padding-top: 50px; // for the mobile menu
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            opacity: .7;
+        }
     }
 }

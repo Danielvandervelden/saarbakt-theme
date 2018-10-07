@@ -18,20 +18,26 @@
 
     .main-content {
         flex: 0 1 40%;
+        align-self: center;
     }
 
     .sara-foto {
         flex: 0 1 40%;
+        text-align: center;
 
         img {
             width: 100%;
-            max-width: 400px;
+            max-width: 300px;
             margin: 0 auto;
         }
     }
 
     .nieuws-recepten {
         padding: $spacingTopBottom;
+
+        .single-blog-post {
+            display: flex;
+        }
 
         h2 {
             text-align: center;
@@ -47,6 +53,27 @@
     body.home {
         .main-content-wrapper {
             flex-direction: row;
+        }
+
+        .nieuws-recepten {
+            display: flex;
+            justify-content: space-around;
+
+            .recepten-frontpage,
+            .nieuws-homepage {
+                display: flex;
+                flex: 0 1 45%;
+
+                .post-thumbnail {
+                    max-width: 200px;
+                    margin: 0 auto 10px auto;
+                }
+            }
+
+            > .main-content-wrapper {
+                flex-direction: column;
+                height: 100%;
+            }
         }
     }
 }

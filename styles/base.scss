@@ -18,6 +18,7 @@ a {
 	color: $color2;
 	font-weight: 500;
 	text-decoration: none;
+	transition: all .3s ease-in-out;
 
 	&:hover {
 		color: $color3;
@@ -48,6 +49,17 @@ a {
 	display: inline-block;
 }
 
+.wp-video {
+	width: 100% !important;
+	max-width: 600px !important;
+	margin: 0 auto !important;
+	height: auto !important;
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+
 //#############################################################
 // Typography
 
@@ -60,6 +72,10 @@ h6 {
 	color: $color1;
 	position: relative;
 	margin: 0;
+}
+
+h2 {
+	font-size: 1.8rem;
 }
 
 p {
@@ -80,7 +96,7 @@ p {
 
 	&:before {
 		content: "";
-		width: 60px;
+		width: 35px;
 		height: 50px;
 		position: absolute;
 		left: 0;
@@ -92,7 +108,7 @@ p {
 
 	&:after {
 		content: "";
-		width: 60px;
+		width: 35px;
 		height: 50px;
 		position: absolute;
 		right: 0;
@@ -100,6 +116,28 @@ p {
 		background-image: url("/wp-content/themes/saarbakt/images/swirl-right.png");
 		background-size: contain;
 		background-repeat: no-repeat;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.page-title {
+		font-size: 4rem;
+
+		.title {
+			&:before {
+				height: 80px;
+				width: 60px;
+			}
+			
+			&:after{
+				height: 80px;
+				width: 60px;
+			}
+		}
+	}
+
+	h2 {
+		font-size: 2.4rem;
 	}
 }
 
@@ -116,6 +154,26 @@ p {
 	padding: $containerSpacing;
 }
 
+@media screen and (min-width: 1024px) {
+	.blog,
+	.page-template-default {
+
+		.main-content-wrapper {
+			display: flex;
+			justify-content: space-around;
+
+			.blogpost {
+				flex: 0 1 45%;
+				margin-right: 5%;
+			}
+
+			.instagramfeed {
+				flex: 0 1 45%;
+			}
+		}
+	}
+}
+
 //#############################################################
 
 //#############################################################
@@ -126,6 +184,7 @@ p {
 	border-radius: 4px;
 	max-width: 200px;
 	display: block;
+	cursor: pointer;
 
 	&.btn-pink {
 		color: #FFF;
@@ -163,6 +222,12 @@ p {
 	&.btn-full-width {
 		width: 100%;
 		max-width: none;
+	}
+
+	@media (min-width: 1024px) {
+			&.btn-full-width {
+				width: auto;
+			}
 	}
 }
 
