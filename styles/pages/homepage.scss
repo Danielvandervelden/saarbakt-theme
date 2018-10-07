@@ -37,6 +37,7 @@
 
         .single-blog-post {
             display: flex;
+            flex-direction: column;
         }
 
         h2 {
@@ -67,6 +68,10 @@
                 .post-thumbnail {
                     max-width: 200px;
                     margin: 0 auto 10px auto;
+                }
+
+                .single-blog-post {
+                    flex-direction: row;
                 }
             }
 

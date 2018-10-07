@@ -1215,6 +1215,7 @@ p {
 }
 .home .nieuws-recepten .single-blog-post {
   display: flex;
+  flex-direction: column;
 }
 .home .nieuws-recepten h2 {
   text-align: center;
@@ -1240,6 +1241,10 @@ body.home .nieuws-recepten .nieuws-homepage {
 body.home .nieuws-recepten .nieuws-homepage .post-thumbnail {
     max-width: 200px;
     margin: 0 auto 10px auto;
+  }
+  body.home .nieuws-recepten .recepten-frontpage .single-blog-post,
+body.home .nieuws-recepten .nieuws-homepage .single-blog-post {
+    flex-direction: row;
   }
   body.home .nieuws-recepten > .main-content-wrapper {
     flex-direction: column;
