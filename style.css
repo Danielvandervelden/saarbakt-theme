@@ -1032,6 +1032,9 @@ p {
   padding: 0 10px;
   outline: 0;
 }
+.search-overlay #search-close {
+  cursor: pointer;
+}
 .search-overlay .search-container {
   padding: 10px 15px;
 }
