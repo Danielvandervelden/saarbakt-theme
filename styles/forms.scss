@@ -20,6 +20,7 @@
         border: 1px solid $color2;
         border-radius: 5px;
         padding: 0 8px;
+        box-sizing: border-box;
     }
 
     textarea {
@@ -29,6 +30,7 @@
         border: 1px solid $color2;
         border-radius: 5px;
         padding: 5px;
+        box-sizing: border-box;
     }
 
     label {

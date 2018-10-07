@@ -1145,6 +1145,7 @@ p {
   border: 1px solid #e55175;
   border-radius: 5px;
   padding: 0 8px;
+  box-sizing: border-box;
 }
 .contact form textarea {
   width: 100%;
@@ -1153,6 +1154,7 @@ p {
   border: 1px solid #e55175;
   border-radius: 5px;
   padding: 5px;
+  box-sizing: border-box;
 }
 .contact form label {
   color: #c4174f;
