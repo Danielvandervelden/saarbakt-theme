@@ -558,6 +558,10 @@ p {
   }
 }
 
+.wpcf7-submit {
+  line-height: 0;
+}
+
 .spacing-top {
   margin-top: 15px;
 }
@@ -1141,6 +1145,14 @@ form input {
   border: 1px solid #e55175;
   border-radius: 5px;
   padding: 0 8px;
+}
+form textarea {
+  width: 100%;
+  box-shadow: 0;
+  outline: 0;
+  border: 1px solid #e55175;
+  border-radius: 5px;
+  padding: 5px;
 }
 form label {
   color: #c4174f;
