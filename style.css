@@ -707,10 +707,20 @@ p {
 .receptenbox .metabox p {
   line-height: 16px;
 }
+.single-blog-post .post-content,
+.receptenbox .post-content {
+  position: relative;
+}
 .single-blog-post .post-content a h2,
 .receptenbox .post-content a h2 {
   text-align: left;
   font-size: 2rem;
+}
+.single-blog-post .post-content form,
+.receptenbox .post-content form {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .ingredientenflex img {
@@ -963,7 +973,7 @@ p {
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
     max-width: 100%;
     max-height: 700px;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
   .navigationdesktop ul#menu-headermenu li .sub-menu li {
     width: 100%;

@@ -42,10 +42,17 @@
     }
 
     .post-content {
+        position: relative;
 
         a h2 {
             text-align: left;
             font-size: 2rem;
+        }
+
+        form {
+            position: absolute;
+            right: 0;
+            bottom: 0;
         }
     }
 }
