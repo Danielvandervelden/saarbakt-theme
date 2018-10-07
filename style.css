@@ -914,6 +914,22 @@ p {
     height: inherit;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
   }
+  .navigationdesktop .menu-item-has-children > a {
+    position: relative;
+  }
+  .navigationdesktop .menu-item-has-children > a:after {
+    position: absolute;
+    right: -20px;
+    top: 0;
+    content: "";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1.5rem;
+    transition: all 0.3s ease-in-out;
+  }
+  .navigationdesktop .menu-item-has-children:hover a:after {
+    transform: rotate(180deg);
+  }
   .navigationdesktop .current-menu-item a {
     position: relative;
   }
