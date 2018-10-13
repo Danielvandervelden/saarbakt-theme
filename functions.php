@@ -8,7 +8,8 @@ function saarbakt_files() {
 	wp_enqueue_style( 'saarbakt styles', get_stylesheet_directory_uri() . '/style.css', array(), '4.1');
 
 	wp_register_script("main javascript", get_bloginfo("stylesheet_directory") . "js/script.js");
-	wp_enqueue_script('main-saarbakt-js', get_theme_file_uri('js/script.js'), array('jquery'), NULL, '2.0', true);
+	wp_enqueue_script('main-saarbakt-js', get_theme_file_uri('js/script.js'), array('jquery'), '2.0.1', true);
+	
 	wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.3.1/css/all.css');
 	wp_localize_script('main-saarbakt-js', 'saarbaktData', array(
 		'root_url' => get_site_url(),
