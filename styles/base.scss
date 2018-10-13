@@ -97,19 +97,7 @@ p {
 .title {
 	position: relative;
 	display: inline-block;
-	padding: 15px 40px;
-
-	// &:before {
-	// 	content: "";
-	// 	width: 35px;
-	// 	height: 50px;
-	// 	position: absolute;
-	// 	left: 0;
-	// 	top: 0;
-	// 	background-image: url("/wp-content/themes/saarbakt/images/cookieman.png");
-	// 	background-size: contain;
-	// 	background-repeat: no-repeat;
-	// }
+	padding: 15px 40px 15px 0;
 
 	&:after {
 		content: "";
