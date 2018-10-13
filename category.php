@@ -15,7 +15,7 @@ get_header();
 	  <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
 
    <div class="metabox">
-	   <p>Gepost door <?php the_author_posts_link(); ?> op <?php the_date('n.j.y') ?> in de categorie: <?php echo get_the_category_list(', ') ?>.</p></div>
+	   <p>Gepost door <?php the_author_posts_link(); ?> op <?php the_date('j F Y') ?> in de categorie: <?php echo get_the_category_list(', ') ?>.</p></div>
 
    <div class="generic-content">
    <p class="generic-content-p"><?php echo wp_trim_words(get_the_content(), 30);?></p>

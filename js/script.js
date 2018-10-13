@@ -52,7 +52,6 @@ $(document).ready(function() {
 
     // Event listener on the mobile menu icon
     $(mobileMenuIcon).click(function() {
-        console.log('clicked');
         $('#mobile-menu').addClass('active');
         $('#backdrop').addClass('active');
         $('html').addClass('no-scroll');
@@ -196,7 +195,6 @@ $(document).ready(function() {
     }
 
     if($('.nieuws-recepten').length > 0 && !isMobile) { // if we're on mobile, since otherwise it's not necessary
-        console.log('it exists!');
         var resizeTimer = 500;
         $(window).resize(function() {
             clearTimeout(resizeTimer)
