@@ -79,12 +79,12 @@ else if ($header_image === NULL) {
 	</div>
  
 	<?php if(is_home()) { ?>
-		<h2 class="page-title"><span class="title">Alle baksels</span></h2>
+		<h1 class="page-title"><span class="title">Alle baksels</span></h1>
 	<?php } else if (is_category()) { ?>
-		<h2 class="page-title"><span class="title"><?php single_cat_title(); ?></span></h2>
+		<h1 class="page-title"><span class="title"><?php single_cat_title(); ?></span></h1>
 	<?php } else { ?>
-		<h2 class="page-title"><span class="title"><?php if ( have_posts() ) : while ( have_posts() ) : the_post(); the_title(); endwhile;
+		<h1 class="page-title"><span class="title"><?php if ( have_posts() ) : while ( have_posts() ) : the_post(); the_title(); endwhile;
 		else: ?>
 		<?php _e('Oh god, nee toch?!'); ?>
-		<?php endif; ?></span></h2>
+		<?php endif; ?></span></h1>
 	<?php } ?>
