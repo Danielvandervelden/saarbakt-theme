@@ -20,6 +20,14 @@ let loader = false;
 console.log(url);
 
 $(document).ready(function() {
+
+    //#############################################################
+    // INIT!
+    //#############################################################
+    (function init() {
+        checkHighestDiv();
+    })()
+
     //#############################################################
     // All javascript for the menu
     
@@ -151,8 +159,44 @@ $(document).ready(function() {
         
         }
         
-        var search = new Search();
+    var search = new Search();
 
 
+    //#############################################################
+
+    //#############################################################
+    // Making homepage most recent news and most recent recipe equal heights
+
+    function resetHeight() {
+        var blogPosts = document.querySelectorAll('.nieuws-recepten .single-blog-post');
+        for(var i=0;i<blogPosts.length;i++) {
+            $(blogPosts[i]).css('height', "auto");
+        }
+        checkHighestDiv();
+    }
+
+    function checkHighestDiv() {
+        var blogPosts = document.querySelectorAll('.nieuws-recepten .single-blog-post');
+        var highest = 0;
+
+        $.each(blogPosts, function(post) {
+            if(parseInt($(this).css('height')) > highest) {
+                highest = $(this).css('height');
+            }
+        })
+
+        for(var i=0;i<blogPosts.length;i++) {
+            $(blogPosts[i]).css('height', highest);
+        }
+    }
+
+    if($('.nieuws-recepten').length > 0) {
+        console.log('it exists!');
+        var resizeTimer = 500;
+        $(window).resize(function() {
+            clearTimeout(resizeTimer)
+            resizeTimer = setTimeout(resetHeight, resizeTimer);
+        });
+    }
     //#############################################################
 })
