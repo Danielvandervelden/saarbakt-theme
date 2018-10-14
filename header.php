@@ -85,6 +85,6 @@ else if ($header_image === NULL) {
 	<?php } else { ?>
 		<h1 class="page-title"><span class="title"><?php if ( have_posts() ) : while ( have_posts() ) : the_post(); the_title(); endwhile;
 		else: ?>
-		<?php _e('Oh god, nee toch?!'); ?>
+		<?php _e('Oh, nee toch?!'); ?>
 		<?php endif; ?></span></h1>
 	<?php } ?>
