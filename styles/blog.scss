@@ -8,6 +8,16 @@
 /* Mobile Styles
 /*_______________________________________________________*/
 
+body:not(.single) {
+    .single-blog-post img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
 .single-blog-post,
 .receptenbox {
     width: 100%;
@@ -15,14 +25,6 @@
     box-shadow: 1px 1px 10px $color3;
     padding: 15px;
     box-sizing: border-box;
-
-    img {
-        width: 100%;
-        height: auto;
-        max-width: 300px;
-        margin: 0 auto;
-        display: block;
-    }
 
     .post-thumbnail {
         margin-bottom: 10px;
@@ -87,27 +89,6 @@
                 top: 0px;
                 background-image: url(/wp-content/themes/saarbakt/images/keukenmachine.png);
                 background-size: cover;
-            }
-        }
-    }
-}
-
-/*
-/* Tablet Styles (minimum 768px)
-/*_______________________________________________________*/
-@media screen and (min-width: 768px) {
-    .single .single-blog-post {
-
-        img {
-            display: inline-block;
-            width: 30%;
-            margin-right: 10px;
-            margin-bottom: 15px;
-            vertical-align: middle;
-            height: auto;
-
-            &:nth-child(3n+3) {
-                margin-right: 0;
             }
         }
     }
