@@ -5,7 +5,7 @@ require get_theme_file_path('/inc/search-route.php');
 
 function saarbakt_files() {
 	wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css?family=Roboto:300,400,500,700');
-	wp_enqueue_style( 'saarbakt styles', get_stylesheet_directory_uri() . '/style.css', array(), '4.1.2');
+	wp_enqueue_style( 'saarbakt styles', get_stylesheet_directory_uri() . '/style.css', array(), '4.1.3');
 
 	wp_register_script("main javascript", get_bloginfo("stylesheet_directory") . "js/script.js");
 	wp_enqueue_script('main-saarbakt-js', get_theme_file_uri('js/script.js'), array('jquery'), '2.0.3', true);
