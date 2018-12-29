@@ -58,7 +58,7 @@ else if ($header_image === NULL) {
 </head>
 <body <?php body_class(); ?>>
 	<div class="page-wrapper">
-	<div class="header-container" style="background-image: url('<?php echo $header_image; ?>')">
+	<header class="header-container" style="background-image: url('<?php echo $header_image; ?>')">
 		<nav class="clearfix" id="nav-bar" class="sticky" role="navigation">
 			<div class="mobile-menu-icon"><i class="fa fa-bars" aria-hidden="true"></i></div>
 			<div class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
@@ -76,7 +76,7 @@ else if ($header_image === NULL) {
 		<div class="saarbaktlogo">
 			<a href="<?php echo site_url("/Home") ?>"><img src="<?php echo get_theme_file_uri('images/Saarbaktlogoheader.png')?>"></a>
 		</div>
-	</div>
+	</header>
  
 	<?php if(is_home()) { ?>
 		<h1 class="page-title"><span class="title">Alle baksels</span></h1>

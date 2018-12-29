@@ -73,9 +73,7 @@
 		padding-right: 30px;
 
 		&:after {
-			content: "\f078";
-			font-family: $fontAwesome;
-			font-weight: 900;
+			@include fa-icon('\f078');
 			font-size: 1.8rem;
 			position: absolute;
 			right: 10px;
@@ -139,12 +137,10 @@
 				position: relative;
 
 				&:after {
+					@include fa-icon('\f078');
 					position: absolute;
 					right: -20px;
 					top: 0;
-					content: '\f078';
-					font-family: $fontAwesome;
-					font-weight: 900;
 					font-size: 1.5rem;
 					transition: all .3s ease-in-out;
 				}

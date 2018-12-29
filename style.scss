@@ -6,17 +6,19 @@ Tags: pink, baking, goodies, sweets
 */
 
 /* General definition and styling */
-@import './styles/assets/normalize';        // normalize the entire website
-@import './styles/assets/variables';        // define all base styles
-@import './styles/base';                    // define all base styles
+
+@import './styles/lib/normalize';        // normalize the entire website
+@import './styles/lib/variables';        // define all base styles
+@import './styles/lib/base';             // define all base styles
+@import './styles/lib/mixins';
 
 /* Parts */
-@import './styles/header';                  // all styles for the header
-@import './styles/footer';                  // all styles for the footer
-@import './styles/blog';                    // all styles for the blog (be it posts, whatever)
-@import './styles/navigation';              // all styles for the navigation
-@import './styles/search-overlay';          // all styles for the search overlay
-@import './styles/forms';                   // all form styles
+@import './styles/components/header';                  // all styles for the header
+@import './styles/components/footer';                  // all styles for the footer
+@import './styles/components/blog';                    // all styles for the blog (be it posts, whatever)
+@import './styles/components/navigation';              // all styles for the navigation
+@import './styles/components/search-overlay';          // all styles for the search overlay
+@import './styles/components/forms';                   // all form styles
 
 /* Pages */
 @import './styles/pages/homepage';          // all styles for the homepage specifically

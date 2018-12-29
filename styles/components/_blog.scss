@@ -20,11 +20,8 @@ body:not(.single) {
 
 .single-blog-post,
 .receptenbox {
-    width: 100%;
+    @include post-container();
     margin: 10px auto 20px auto;
-    box-shadow: 1px 1px 10px $color3;
-    padding: 15px;
-    box-sizing: border-box;
 
     .post-thumbnail {
         margin-bottom: 10px;
