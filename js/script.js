@@ -201,5 +201,31 @@ $(document).ready(function() {
             resizeTimer = setTimeout(resetHeight, resizeTimer);
         });
     }
-    //#############################################################
+	//#############################################################
+	
+	// Initialize the Glide slider if there's baking bags.
+	let glideCarousels = document.querySelectorAll('.glide');
+
+	[].forEach.call(glideCarousels, (carousel) => {
+		new Glide(carousel, {
+			type: 'slider',
+			startAt: 0,
+			perView: 3,
+			gap: 25,
+			bound: true,
+			breakpoints: {
+				768: {
+					perView: 2
+				},
+
+				500: {
+					perView: 1,
+					peek: {
+						before: 0,
+						after: 100
+					}
+				}
+			}
+		}).mount();
+	})
 })

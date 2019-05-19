@@ -3,6 +3,8 @@ get_header();
 
 ?>
 
+<?php echo get_template_part('template-parts/baking-bags'); ?>
+
 <div class="main-content-wrapper">
 
 		<div class="main-content">
@@ -14,7 +16,7 @@ get_header();
 		$image = get_field('voorpagina_foto');
 		echo '<img src="' . $image . '" alt="voorpagina foto">';
 		?>
-</div>
+	</div>
 </div>
 
 <div class="nieuws-recepten">

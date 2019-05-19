@@ -1,0 +1,35 @@
+/*
+/* All styles for baking bags
+/*_______________________________________________________*/
+
+/**
+ * ALL STYLES FOR THE GLIDE CAROUSEL!
+ */
+.baking-bags {
+	padding: 0 15px;
+	box-sizing: border-box;
+
+	.glide {
+		&__slide { 
+			text-align: center;
+
+			h4 {
+				margin-bottom: 2rem;
+			}
+
+			.btn {
+				width: 100%;
+				max-width: none;
+			}
+		}
+	}
+} 
+
+/**
+ * ALL STYLES FOR THE SINGLE BAKING BAG PAGE
+ */
+ .main-content-wrapper.bakingbags {
+	 .post-thumbnail-single {
+		 text-align: center;
+	 }
+ }
