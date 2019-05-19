@@ -45,6 +45,9 @@ else if ($header_image === NULL) {
     }
 }
 
+if (isset($_POST['baking_bag_buy'])) { // if the "buy baking bag" button is clicked
+	require 'server/bakingbag_email.php.php';
+}
 ?>
 
 <!DOCTYPE html>

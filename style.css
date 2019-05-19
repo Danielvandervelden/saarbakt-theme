@@ -1100,6 +1100,8 @@ body:not(.single) .single-blog-post img {
   .contact form label {
     color: #c4174f;
     font-weight: bold; }
+  .contact form .form-control {
+    margin: 2rem 0; }
 
 /*
 /* Desktop Styles (minimum 1024px)
@@ -1125,6 +1127,15 @@ body:not(.single) .single-blog-post img {
  * ALL STYLES FOR THE SINGLE BAKING BAG PAGE
  */
 .main-content-wrapper.bakingbags .post-thumbnail-single {
+  text-align: center; }
+  .main-content-wrapper.bakingbags .post-thumbnail-single img {
+    width: 100%;
+    max-width: 300px; }
+
+.main-content-wrapper.bakingbags .btn {
+  max-width: none; }
+
+.main-content-wrapper.bakingbags h3 {
   text-align: center; }
 
 /* Pages */

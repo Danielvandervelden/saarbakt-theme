@@ -31,5 +31,18 @@
  .main-content-wrapper.bakingbags {
 	 .post-thumbnail-single {
 		 text-align: center;
+
+		 img {
+			width: 100%;
+			max-width: 300px;
+		 }
+	 }
+
+	 .btn {
+		max-width: none;
+	}
+
+	 h3 {
+		 text-align: center;
 	 }
  }
